@@ -1,7 +1,15 @@
+html {
+    height: 100%;
+}
 body {
 margin: 0;
 padding: 0;
 font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+background-image: url("../images/venice-background.jpg");
+background-size: cover;
+background-repeat: repeat;
+height: 100%; 
+background-position: center;
 }
 
 h1 {
@@ -20,11 +28,7 @@ h3 {
     color: #4aaaa5;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
-.main {
-    background-image: url("../images/venice-background.jpg");
-    background-size: cover;
-    min-height: 100%;
-}
+    
 p {
     padding: 25px;
 }
@@ -35,7 +39,8 @@ p {
     margin: 0 auto;
     position: relative;
     top: 40px;
-    overflow: inherit;
+    overflow: scroll;
+    height: 80%;
 }
 
 .h-line {
@@ -132,8 +137,8 @@ a:hover {
 }
 
 .portfolio-wrapper {
-    height: 200px;
-    width: 300px;
+    height: 150px;
+    width: 225px;
     padding: 50px;
     display: inline-block;
     margin: auto;
@@ -162,6 +167,8 @@ a:hover {
 
 .port-content {
     margin: 0 10%;
+    overflow: scroll;
+    height: 80%;
 }
 
 .contact-form {
@@ -195,7 +202,37 @@ textarea {
     font-weight: bold;
 }
 
-/* Screens less than 700 */
+@media screen and (max-width: 980px) {
+.nav-links {
+    margin: 2% 20% 0 0;
+}
+
+.nav-links a {
+    margin: 0 0 0 0;
+    padding: 0 5px;
+}
+body {
+background-size: cover;
+background-repeat: repeat;
+height: 100%; 
+background-position: center;
+}
+
+.footer {
+    position: relative;
+    bottom: -30px;
+    margin-top: 30px;
+}
+
+.footer-contact {
+    position: fixed;
+    bottom: 0;
+}
+
+}
+
+
+/* Screens less than 768 */
 
 @media screen and (max-width: 768px) {
     .content {
@@ -228,22 +265,24 @@ textarea {
         padding: 3px 0;
         font-size: 10px;
     }
-    .main {
+    body {
         background-image: url("../images/venice-background.jpg");
         background-size: cover;
+        background-repeat: repeat;
         height: auto;
     }
 
     .footer {
         position: relative;
-        bottom: -60px;
+        bottom: -30px;
+        margin-top: 30px;
     }
 
 }
 
 @media only screen and (max-width: 640px) {
-.main {
-    height: 100%;
+body {
+    
     background-image: none;
 }
 .content {
